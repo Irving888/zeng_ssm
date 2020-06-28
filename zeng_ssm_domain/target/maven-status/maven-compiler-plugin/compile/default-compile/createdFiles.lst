@@ -1,0 +1,7 @@
+com\zeng\domain\Product.class
+com\zeng\domain\Role.class
+com\zeng\domain\Orders.class
+com\zeng\domain\Member.class
+com\zeng\domain\UserInfo.class
+com\zeng\domain\Permission.class
+com\zeng\domain\Traveller.class
