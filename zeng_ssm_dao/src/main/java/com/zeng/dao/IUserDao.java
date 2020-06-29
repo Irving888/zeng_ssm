@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.List;
+
 public interface IUserDao {
     @Select("select * from users where username = #{username}")
     @Results({
@@ -18,4 +20,7 @@ public interface IUserDao {
             @Result(column = "id",property = "roles",javaType = java.util.List.class, many = @Many(select = "com.zeng.dao.IRoleDao.findRoleByUserId"))
     })
     public UserInfo findByUsername(String username);
+
+    @Select("select * from users")
+    List<UserInfo> findAll();
 }

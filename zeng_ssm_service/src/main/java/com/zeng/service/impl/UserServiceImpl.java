@@ -35,4 +35,9 @@ public class UserServiceImpl implements IUserService {
         }
         return list;
     }
+
+    public List<UserInfo> findAll() throws Exception {
+        return userDao.findAll();
+    }
+
 }
