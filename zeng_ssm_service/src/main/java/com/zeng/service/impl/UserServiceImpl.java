@@ -40,4 +40,12 @@ public class UserServiceImpl implements IUserService {
         return userDao.findAll();
     }
 
+    public void addUser(UserInfo userInfo) throws Exception{
+        userDao.addUser(userInfo);
+    }
+
+    /*public void addUser(UserInfo userInfo) throws Exception{
+        userDao.userAdd();
+    }*/
+
 }

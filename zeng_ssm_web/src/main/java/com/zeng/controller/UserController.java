@@ -10,12 +10,12 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-@RequestMapping("user/")
+@RequestMapping("/user")
 public class UserController {
     @Autowired
     IUserService userService;
 
-    @RequestMapping("findAll.do")
+    @RequestMapping("/findAll.do")
     public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();
 //        UserInfo userList = userService.findAll();
@@ -23,5 +23,11 @@ public class UserController {
         mv.addObject("userList",userList);
         mv.setViewName("user-list");
         return mv;
+    }
+
+    @RequestMapping("/addUser.do")
+    public String addUser(UserInfo userInfo) throws Exception{
+        userService.addUser(userInfo);
+        return "redirect:findAll.do";
     }
 }

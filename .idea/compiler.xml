@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zeng_ssm_dao" />
-        <module name="zeng_ssm_service" />
         <module name="zeng_ssm_domain" />
+        <module name="zeng_ssm_service" />
+        <module name="zeng_ssm_dao" />
         <module name="zeng_ssm_web" />
         <module name="zeng_ssm_utils" />
       </profile>
