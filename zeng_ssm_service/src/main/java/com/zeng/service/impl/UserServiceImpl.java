@@ -9,9 +9,9 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,10 +21,13 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private IUserDao userDao;
 
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserInfo userInfo = userDao.findByUsername(username);
 //        User user = new User(userInfo.getUsername(),"{noop}"+userInfo.getPassword(),getAuthorities(userInfo.getRoles()));
-        User user = new User(userInfo.getUsername(),"{noop}"+userInfo.getPassword(),userInfo.getStatus()==0?false:true,true,true,true,getAuthorities(userInfo.getRoles()));
+        User user = new User(userInfo.getUsername(),userInfo.getPassword(),userInfo.getStatus()==0?false:true,true,true,true,getAuthorities(userInfo.getRoles()));
         return user;
     }
 
@@ -41,11 +44,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     public void addUser(UserInfo userInfo) throws Exception{
+        userInfo.setPassword(bCryptPasswordEncoder.encode(userInfo.getPassword()));
         userDao.addUser(userInfo);
     }
-
-    /*public void addUser(UserInfo userInfo) throws Exception{
-        userDao.userAdd();
-    }*/
-
 }
