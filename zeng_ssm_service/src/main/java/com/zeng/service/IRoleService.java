@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface IRoleService {
     public List<Role> findAll();
+
+    void save(Role role) throws Exception;
 }

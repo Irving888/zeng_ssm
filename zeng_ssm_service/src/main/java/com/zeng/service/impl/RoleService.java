@@ -18,4 +18,8 @@ public class RoleService implements IRoleService {
     public List<Role> findAll() {
         return roleDao.findAll();
     }
+
+    public void save(Role role) throws Exception {
+        roleDao.save(role);
+    }
 }
