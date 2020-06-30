@@ -9,4 +9,6 @@ public interface IUserService extends UserDetailsService {
     public List<UserInfo> findAll() throws Exception;
 
     void addUser(UserInfo userInfo) throws Exception;
+
+    UserInfo findById(String id) throws Exception;
 }

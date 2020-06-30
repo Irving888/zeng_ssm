@@ -1,5 +1,6 @@
 com\zeng\dao\IOrdersDao.class
 com\zeng\dao\IMemberDao.class
+com\zeng\dao\IPermissionDao.class
 com\zeng\dao\ITravellerDao.class
 com\zeng\dao\IRoleDao.class
 com\zeng\dao\IUserDao.class

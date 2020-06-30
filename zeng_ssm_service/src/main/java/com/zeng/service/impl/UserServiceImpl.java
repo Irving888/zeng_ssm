@@ -24,6 +24,10 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    public UserInfo findById(String id) throws Exception {
+        return userDao.findById(id);
+    }
+
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserInfo userInfo = userDao.findByUsername(username);
 //        User user = new User(userInfo.getUsername(),"{noop}"+userInfo.getPassword(),getAuthorities(userInfo.getRoles()));
