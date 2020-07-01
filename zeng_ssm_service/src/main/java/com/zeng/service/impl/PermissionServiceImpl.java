@@ -18,4 +18,8 @@ public class PermissionServiceImpl implements IPermissionService {
     public List<Permission> findAll() {
         return permissionDao.findAll();
     }
+
+    public void save(Permission permission) throws Exception{
+        permissionDao.save(permission);
+    }
 }

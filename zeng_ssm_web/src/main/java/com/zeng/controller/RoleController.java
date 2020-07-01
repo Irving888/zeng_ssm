@@ -15,7 +15,7 @@ public class RoleController {
     @Autowired
     IRoleService roleService;
 
-    @RequestMapping("/findAll")
+    @RequestMapping("/findAll.do")
     public ModelAndView findAll(){
         ModelAndView mv = new ModelAndView();
         List<Role> roles = roleService.findAll();
@@ -24,7 +24,7 @@ public class RoleController {
         return mv;
     }
 
-    @RequestMapping("/save")
+    @RequestMapping("/save.do")
     public String save(Role role) throws Exception {
         roleService.save(role);
         return "redirect:findAll.do";
