@@ -1,8 +1,10 @@
 D:\workspace\zeng_ssm\zeng_ssm_service\src\main\java\com\zeng\service\impl\IProductServiceImpl.java
 D:\workspace\zeng_ssm\zeng_ssm_service\src\main\java\com\zeng\service\impl\RoleService.java
 D:\workspace\zeng_ssm\zeng_ssm_service\src\main\java\com\zeng\service\impl\OrdersServiceImpl.java
+D:\workspace\zeng_ssm\zeng_ssm_service\src\main\java\com\zeng\service\impl\PermissionServiceImpl.java
 D:\workspace\zeng_ssm\zeng_ssm_service\src\main\java\com\zeng\service\IUserService.java
 D:\workspace\zeng_ssm\zeng_ssm_service\src\main\java\com\zeng\service\IProductService.java
 D:\workspace\zeng_ssm\zeng_ssm_service\src\main\java\com\zeng\service\IOrdersService.java
 D:\workspace\zeng_ssm\zeng_ssm_service\src\main\java\com\zeng\service\impl\UserServiceImpl.java
+D:\workspace\zeng_ssm\zeng_ssm_service\src\main\java\com\zeng\service\IPermissionService.java
 D:\workspace\zeng_ssm\zeng_ssm_service\src\main\java\com\zeng\service\IRoleService.java

@@ -1,8 +1,10 @@
 com\zeng\service\impl\IProductServiceImpl.class
 com\zeng\service\impl\OrdersServiceImpl.class
+com\zeng\service\impl\PermissionServiceImpl.class
 com\zeng\service\impl\RoleService.class
 com\zeng\service\IRoleService.class
 com\zeng\service\IUserService.class
 com\zeng\service\IOrdersService.class
+com\zeng\service\IPermissionService.class
 com\zeng\service\IProductService.class
 com\zeng\service\impl\UserServiceImpl.class
