@@ -42,7 +42,4 @@ public interface IUserDao {
 
     @Insert("insert into users_role(userId,roleId) values(#{userId},#{roleId})")
     void addRoleToUser(@Param("userId")String userId, @Param("roleId")String roleId);
-
-//    @Insert("insert into users_role(userid,roleid) values(#{id},#{roles})")
-//    void addRoleToUser(String userId,String[] ids);
 }

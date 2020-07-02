@@ -51,7 +51,6 @@ public class UserController {
     @RequestMapping("/findAll.do")
     public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();
-//        UserInfo userList = userService.findAll();
         List<UserInfo> userList = userService.findAll();
         mv.addObject("userList",userList);
         mv.setViewName("user-list");
