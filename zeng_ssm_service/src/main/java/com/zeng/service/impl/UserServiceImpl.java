@@ -28,6 +28,17 @@ public class UserServiceImpl implements IUserService {
         return userDao.findById(id);
     }
 
+    public List<Role> findOtherRoles(String id) throws Exception {
+        return userDao.findOtherRoles(id);
+    }
+
+    public void addRoleToUser(String userId,String[] roleIds) {
+        for (String roleId : roleIds) {
+            userDao.addRoleToUser(userId,roleId);
+        }
+    }
+
+
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserInfo userInfo = userDao.findByUsername(username);
 //        User user = new User(userInfo.getUsername(),"{noop}"+userInfo.getPassword(),getAuthorities(userInfo.getRoles()));
