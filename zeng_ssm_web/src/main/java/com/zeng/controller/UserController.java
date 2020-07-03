@@ -4,6 +4,7 @@ import com.zeng.domain.Role;
 import com.zeng.domain.UserInfo;
 import com.zeng.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -49,6 +50,7 @@ public class UserController {
 
 
     @RequestMapping("/findAll.do")
+    @PreAuthorize("hasRole(ADMIN)")
     public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();
         List<UserInfo> userList = userService.findAll();
@@ -58,6 +60,7 @@ public class UserController {
     }
 
     @RequestMapping("/addUser.do")
+    @PreAuthorize("authentication.principal.username='tom'")
     public String addUser(UserInfo userInfo) throws Exception{
         userService.addUser(userInfo);
         return "redirect:findAll.do";
