@@ -34,7 +34,6 @@
 
 			</a>
 				<ul class="treeview-menu">
-
 					<li id="system-setting">
 						<security:authorize access="hasRole('ADMIN')">
 						<a

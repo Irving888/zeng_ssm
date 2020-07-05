@@ -50,7 +50,7 @@ public class UserController {
 
 
     @RequestMapping("/findAll.do")
-    @PreAuthorize("hasRole(ADMIN)")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();
         List<UserInfo> userList = userService.findAll();
